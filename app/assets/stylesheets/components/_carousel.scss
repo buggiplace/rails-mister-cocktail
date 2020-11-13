@@ -38,8 +38,8 @@
 
 .carousel-inner{
   width:100%;
-  max-height: 75vh !important;
-  min-height: 50vh !important;
+  max-height: 75vh;
+  min-height: 50vh;
 }
 
 .carousel-inner img{
@@ -57,7 +57,7 @@
 // Smallest device
 @media (min-width: 100px) and (max-width: 575px) {
   .carousel-inner {
-    height: 30vh;
+    max-height: 15vh !important;
   }
 }
 
