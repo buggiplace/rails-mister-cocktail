@@ -24,11 +24,21 @@
               <%= dose.ingredient.name %>
           </li>
         <% end %>
-      </ul>
+
     </div>
-<div class="d-flex justify-content-center">
-  <%= link_to 'Add a new dose', new_cocktail_dose_path(@cocktail), class: 'btn btn-success'%>
-  <%= link_to 'Back to home', root_path, class: 'btn btn-primary'%>
+<div class="container">
+<%= render 'doses/form' %>
 </div>
 
-<%=  %>
+<br>
+<br>
+<div class="d-flex justify-content-center">
+    <%= link_to 'Back to home', root_path, class: 'btn btn-primary'%>
+</div>
+
+
+
+<br>
+<br>
+<br>
+
