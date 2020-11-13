@@ -12,18 +12,33 @@
 </div>
 <% end %>
 
+<div class="d-flex justify-content-center">
     <div class="ingredients mt-5 mb-5">
-        <h3>Ingredients</h3>
-        <% @cocktail.doses.each do |dose| %>
-          <li>
-              <%= link_to dose_path(dose), method: :delete, data: {confirm: 'Are you sure?'} do %>
+      <h2>Ingredients</h2>
+      <table class="table ingredients">
+        <thead>
+          <tr>
+            <th scope="col">Description</th>
+            <th scope="col">Ingredient</th>
+            <th scope="col">Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% @cocktail.doses.each do |dose| %>
+          <tr>
+            <th scope="row"><%= dose.description %></th>
+            <td><%= dose.ingredient.name %></td>
+            <td><%= link_to dose_path(dose), method: :delete, data: {confirm: 'Are you sure?'} do %>
               <i class="fas fa-trash-alt">
               </i>
               <% end %>
-              <%= dose.description %>
-              <%= dose.ingredient.name %>
-          </li>
-        <% end %>
+            </td>
+            <% end %>
+          </tr>
+        </tbody>
+      </table>
+     </div>
+</div>
 
     </div>
 <div class="container">
@@ -33,12 +48,8 @@
 <br>
 <br>
 <div class="d-flex justify-content-center">
-    <%= link_to 'Back to home', root_path, class: 'btn btn-primary'%>
+    <%= link_to 'Back to home', root_path, class: 'btn btn-secondary btn-lg btn-block'%>
 </div>
 
-
-
-<br>
-<br>
 <br>
 

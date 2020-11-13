@@ -1,20 +1,50 @@
-
-<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://images.unsplash.com/photo-1514933651103-005eec06c04b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2534&q=80);">
-  <div class="container flex-direction: row ">
-    <h1>Moe's Tavern brings <strong>amazing drinks</strong> to <strong>thirsty people</strong>!</h1>
-    <p>Change your life and learn to drink.</p>
-    <a class="btn btn-flat" href="#">Apply now</a>
+<div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel" data-interval="3000">
+  <div class="carousel-inner mb-5">
+        <div class="carousel-content">
+          <h1>Moe's Tavern</h1>
+          <h2>brings <strong>amazing drinks</strong> to <strong>thirsty people</strong>!</h2>
+          <p>Change your life and learn to drink.</p>
+        </div>
+    <div class="carousel-item active carousel-pic">
+        <img src="https://images.unsplash.com/photo-1514933651103-005eec06c04b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2534&q=80" class="d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item carousel-pic">
+      <img src="https://www.signatureluxurytravel.com.au/wp-content/uploads/2019/06/ATLAS-Parkview-Square-Interior-6-22.jpg" class="d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item carousel-pic">
+      <img src="https://www.thevintagenews.com/wp-content/uploads/2015/04/jobenro.jpg" class="d-block w-100" alt="...">
+    </div>
+     <div class="carousel-item carousel-pic">
+      <img src="https://www.signatureluxurytravel.com.au/wp-content/uploads/2019/06/The-Dead-Rabbit.jpg" class="d-block w-100" alt="...">
+    </div>
+     <div class="carousel-item carousel-pic">
+      <img src="https://i.pinimg.com/originals/18/8a/fe/188afe7ed2f9b76a202445b6552a2b84.jpg" class="d-block w-100" alt="...">
+    </div>
   </div>
 </div>
-<br>
+
+
+
+<!-- <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://images.unsplash.com/photo-1514933651103-005eec06c04b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2534&q=80);">
+  <div class="container flex-column ">
+    <h1>Moe's Tavern</h1>
+    <h2>brings <strong>amazing drinks</strong> to <strong>thirsty people</strong>!</h2>
+    <p>Change your life and learn to drink.</p>
+  </div>
+</div>
+<br> -->
+
+
 <div class="d-flex justify-content-center mb-5">
 <%= link_to 'Add a new cocktail', new_cocktail_path, class: 'btn btn-primary'%>
 </div>
 
+
+
   <div class="container cards_grid mt-5">
-    <div class="cards mb-5">
+    <div class="cards mb-5 text-decoration-none">
       <% @cocktails.each do |coc| %>
-        <%= link_to cocktail_path(coc) do %>
+        <%= link_to cocktail_path(coc), class: 'text-decoration-none' do %>
         <% if coc.photo.attached? %>
           <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= cl_image_path coc.photo.key, height: 300, width: 400, crop: :fill %>')">
           <%= coc.name %>
@@ -28,5 +58,6 @@
       <% end %>
     </div>
   </div>
+
 
 

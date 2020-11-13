@@ -6,10 +6,26 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  color: white;
+  color: ivory;
   font-size: 21px;
   font-weight: bold;
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
   border-radius: 7px;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  filter: saturate(50%);
 }
+
+.card-category:hover {
+  transform: scale(1.05);
+  filter: saturate(120%);
+  border-radius: 10px;
+  border-color: 3px black;
+  transition: 250ms;
+}
+
+
+// .card-category :hover {
+//   text-decoration: transparent;
+// }
+
+
