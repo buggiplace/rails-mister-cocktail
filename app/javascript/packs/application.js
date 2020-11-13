@@ -23,7 +23,3 @@ document.addEventListener('turbolinks:load', () => {
   // Call your JS functions here
   initUpdateNavbarOnScroll();
 });
-<br>
-<br>
-<br>
-<br>

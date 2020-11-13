@@ -1,17 +1,24 @@
     <div class="ingredients">
       <h2>Ingredients</h2>
       <ul >
+            <%if @cocktail.photo.attached? %>
+              <%= cl_image_tag @cocktail.photo.key, height: 300, width: 400, crop: :fill %>
+              <% else %>
+              <img src="https://res.cloudinary.com/dvoduvlcz/image/upload/v1605264191/placeholders/placehold_no_image_fl8tij.jpg">
+              <% end  %>
         <% @cocktail.doses.each do |dose| %>
           <li>
               <%= link_to dose_path(dose), method: :delete, data: {confirm: 'Are you sure?'} do %>
             <div class="fas fa-trash-alt">
             </div>
             <% end %>
-            <%= dose.ingredient.name %>
+              <%= dose.ingredient.name %>
+
           </li>
         <% end %>
       </ul>
     </div>
-<%= link_to 'New dose', new_cocktail_dose_path(@cocktail), class: 'btn btn-primary'%>
-<%= link_to 'Back', root_path, class: 'btn btn-primary'%>
+<%= link_to 'Add a new dose', new_cocktail_dose_path(@cocktail), class: 'btn btn-primary'%>
+<%= link_to 'Back to home', root_path, class: 'btn btn-primary'%>
+
 
