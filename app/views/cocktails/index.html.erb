@@ -6,6 +6,11 @@
           <h2>brings <strong>amazing drinks</strong> to <strong>thirsty people</strong>!</h2>
           <p>Change your life and learn to drink.</p>
         </div>
+        <div id="sign">
+          <div id="text">
+            <h1>O<span id="offset">P</span>EN</h1>
+          </div>
+        </div>
     <div class="carousel-item active carousel-pic">
         <img src="https://images.unsplash.com/photo-1514933651103-005eec06c04b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2534&q=80" class="d-block w-100" alt="...">
     </div>
@@ -25,7 +30,6 @@
 </div>
 
 
-
 <!-- <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://images.unsplash.com/photo-1514933651103-005eec06c04b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2534&q=80);">
   <div class="container flex-column ">
     <h1>Moe's Tavern</h1>
@@ -37,12 +41,12 @@
 
 
 <div class="d-flex justify-content-center mb-5">
-<%= link_to 'Add a new cocktail', new_cocktail_path, class: 'btn btn-primary'%>
+<%= link_to 'Add a new cocktail', new_cocktail_path, class: 'btn btn btn-outline-dark'%>
 </div>
 
 
 
-  <div class="container cards_grid mt-5">
+  <div class="container cards-grid mt-5">
     <div class="cards mb-5 text-decoration-none">
       <% @cocktails.each do |coc| %>
         <%= link_to cocktail_path(coc), class: 'text-decoration-none' do %>
